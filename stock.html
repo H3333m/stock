@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Index Page</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .stock-quotes {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 0.8em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Stock Market Insights</h1>
+        <p>Get the latest updates on market trends and stock prices!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#market-overview">Market Overview</a></li>
+            <li><a href="#stocks-today">Stocks Today</a></li>
+            <li><a href="#investment-tips">Investment Tips</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="market-overview" class="content">
+        <h2>Market Overview</h2>
+        <p>Learn about the current state of the global markets and upcoming trends.</p>
+        <div class="stock-quotes">
+            <h3>Random Stock Quotes</h3>
+            <p id="stock-quote">Loading stock quotes...</p>
+        </div>
+    </section>
+
+    <section id="stocks-today" class="content">
+        <h2>Stocks Today</h2>
+        <p>Check out the performance of stocks today and track your favorites.</p>
+    </section>
+
+    <section id="investment-tips" class="content">
+        <h2>Investment Tips</h2>
+        <p>Get expert advice on smart investments and portfolio management.</p>
+    </section>
+
+    <section id="contact" class="content">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need more information, feel free to reach out to us.</p>
+    </section>
+
+    <footer>
+        <p>Stock Market Insights &copy; 2024</p>
+    </footer>
+
+    <script>
+        // Array of random stock market quotes
+        const stockQuotes = [
+            "Apple Inc. (AAPL) is up 2.35% today.",
+            "Tesla Inc. (TSLA) drops by 1.8%.",
+            "Amazon.com Inc. (AMZN) gains 3.12%.",
+            "Microsoft Corp. (MSFT) remains stable with 0.75% growth.",
+            "Google (Alphabet Inc.) (GOOGL) surges by 4.45%.",
+            "Meta Platforms Inc. (META) down by 2.01%."
+        ];
+
+        // Function to display a random stock quote
+        function displayRandomStockQuote() {
+            const randomIndex = Math.floor(Math.random() * stockQuotes.length);
+            document.getElementById('stock-quote').innerText = stockQuotes[randomIndex];
+        }
+
+        // Call the function on page load
+        window.onload = function() {
+            displayRandomStockQuote();
+        };
+    </script>
+
+</body>
+</html>
